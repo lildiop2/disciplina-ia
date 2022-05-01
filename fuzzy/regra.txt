@@ -1,0 +1,25 @@
+Se velocidade baixa e distancia muito pequena entao freia suave
+Se velocidade baixa e distancia pequena entao freia suave
+Se velocidade baixa e distancia media entao freia leve
+Se velocidade baixa e distancia moderadamente alta entao freia suave
+Se velocidade baixa e distancia alta entao freia suave
+Se velocidade moderadamente baixa e distancia muito pequena entao freia suave
+Se velocidade moderadamente baixa e distancia pequena entao freia suave
+Se velocidade moderadamente baixa e distancia media entao freia leve
+Se velocidade moderadamente baixa e distancia moderadamente leve
+Se velocidade moderadamente baixa e distancia alta entao freia leve
+Se velocidade media e distancia muito pequena entao freia moderadamente forte
+Se velocidade media e distancia pequena entao freia moderadamente forte
+Se velocidade media e distancia media entao freia suave
+Se velocidade media e distancia moderadamente alta entao freia moderadamente leve
+Se velocidade media e distancia alta entao freia leve
+Se velocidade moderadamente alta e distancia muito pequena entao freia forte
+Se velocidade moderadamente alta e distancia pequena entao freia forte
+Se velocidade moderadamente alta e distancia media entao freia moderadamente forte
+Se velocidade moderadamente alta e distancia moderadamente alta entao freia suave
+Se velocidade moderadamente alta e distancia alta entao freia suave
+Se velocidade alta e distancia muito pequena entao freia forte
+Se velocidade alta e distancia pequena entao freia forte
+Se velocidade alta e distancia media entao freia moderadamente forte
+Se velocidade alta e distancia moderadamente alta entao freia suave
+Se velocidade alta e distancia alta entao freia suave
