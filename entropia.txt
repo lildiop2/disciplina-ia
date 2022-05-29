@@ -1,0 +1,27 @@
+Entropia (S) = - (p+log2 p+ + plog2p-)
+Ganho (S, A) = Entropia (S) -  ((|Sv| / |S|) * Entropia (Sv))
+
+
+Entropia (S) = - (9/14) Log2(9/14) – (5/14) Log2(5/14) = 0.940 
+
+Entropia(aparencia=ensolarado) = - 2/5 log2(2/5) - 3/5 log 2(3/5) = 0,971
+Entropia(aparencia=nublado) = - 4/4 log2(4/4) - 0/4 log2(0/4) = 0
+Entropia(aparencia=chuva) = - 3/5 log2(3/5) - 2/5 log2(2/5) = 0,971
+
+Entropia (temperatura = quente)= - 2/4 log2(2/4) - 2/4 log2(2/4) = 1
+Entropia (temperatura = moderada)= - 4/6 log2(4/6) - 2/6 log2(2/6) = 0,92
+Entropia (temperatura = fria)= - 2/4 log2(2/4) - 2/4 log2(2/4) = 1
+
+Entropia (umidade = alta)= - 3/7 log2(3/7) - 4/7 log2(4/7) =  0,98
+Entropia (umidade = normal)= - 6/7 log2(6/7) - 1/7 log2(1/7) =0,59
+
+Entropia (vento = fraco)= - 6/8 log2(6/8) - 2/8 log2(2/8) = 0,81
+Entropia (vento = forte)= - 3/6 log2(3/6) - 3/6 log2(3/6) = 1
+
+
+Ganho (S, A) = Entropia (S) -  ((|Sv| / |S|) * Entropia (Sv))
+Ganho (S,aparencia) = 0,940 - (5/14). 0,971 - (4/14). 0 - (5/14). 0,971 = 0,246
+Ganho (S,temperatura) = 0,940 - (4/14). 1 - (6/14). 0,92 - (4/14). 1 = -0,025
+Ganho (S,umidade) = 0,940 - (7/14). 0,59 - (7/14). 0,98 = 0,151
+Ganho (S,vento) = 0,940 - (8/14). 0,81 - (6/14). 1 = 0,047
+
