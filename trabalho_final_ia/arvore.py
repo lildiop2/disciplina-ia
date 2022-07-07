@@ -3,22 +3,43 @@ import pandas as pd
 import matplotlib.pyplot as plot
 import seaborn as sns
 import pydotplus
-dataset = pd.read_csv('wine.data', header = None)
+dataset = pd.read_csv('training.csv')
+genero = []
+for i in dataset.index:
+ if int(dataset["pop"][i]) == 1:
+  # print(f'{i}--{dataset["pop"][i]}')
+  genero.append(1)
+ elif int(dataset["rock"][i]) == 1:
+    # print(f'{i}--{dataset["rock"][i]}')
+  genero.append(2)
+ elif int(dataset["hip hop"][i]) == 1:
+    # print(f'{i}--{dataset["hip hop"][i]}')
+  genero.append(3)
+ elif int(dataset["Dance/Electronic"][i]):
+  #  print(f'{i}')
+  genero.append(4)
 
-dataset.columns = ['label',
-                   'alcohol', 
-                   'malic_acid', 
-                   'ash', 
-                   'alcalinity_of_ash', 
-                   'magnesium', 
-                   'total_phenols', 
-                   'flavanoids', 
-                   'nonflavanoid_phenols', 
-                   'proanthocyanins', 
-                   'color_intensity', 
-                   'hue',
-                   'OD280/OD315',
-                   'proline']
+dataset=dataset.assign(genero=genero)
+print(dataset)
+dataset = dataset.drop(columns=['pop','rock','hip hop','Dance/Electronic'])
+print(dataset)
+# dataset = pd.read_csv('wine.data', header = None)
+#1:pop	2:rock	3:hip hop	4:Dance/Electronic
+
+# dataset.columns = ['label',
+#                    'alcohol', 
+#                    'malic_acid', 
+#                    'ash', 
+#                    'alcalinity_of_ash', 
+#                    'magnesium', 
+#                    'total_phenols', 
+#                    'flavanoids', 
+#                    'nonflavanoid_phenols', 
+#                    'proanthocyanins', 
+#                    'color_intensity', 
+#                    'hue',
+#                    'OD280/OD315',
+#                    'proline']
 
 # print(f'{dataset}')
 from sklearn.model_selection import train_test_split
