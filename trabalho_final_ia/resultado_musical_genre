@@ -1,0 +1,889 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     musical_genre
+Instances:    1978
+Attributes:   16
+              artist
+              duration_ms
+              explicit
+              year
+              popularity
+              danceability
+              energy
+              loudness
+              mode
+              speechiness
+              acousticness
+              instrumentalness
+              liveness
+              valence
+              tempo
+              genre
+Test mode:    split 70.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+explicit = False
+|   instrumentalness <= 0.0102
+|   |   danceability <= 0.645
+|   |   |   speechiness <= 0.054
+|   |   |   |   energy <= 0.527
+|   |   |   |   |   liveness <= 0.116: pop (42.0)
+|   |   |   |   |   liveness > 0.116
+|   |   |   |   |   |   danceability <= 0.58: pop (16.0/1.0)
+|   |   |   |   |   |   danceability > 0.58
+|   |   |   |   |   |   |   acousticness <= 0.474
+|   |   |   |   |   |   |   |   artist <= 398: pop (2.0)
+|   |   |   |   |   |   |   |   artist > 398: country (2.0)
+|   |   |   |   |   |   |   acousticness > 0.474: HipHop (4.0/1.0)
+|   |   |   |   energy > 0.527
+|   |   |   |   |   artist <= 315
+|   |   |   |   |   |   artist <= 295
+|   |   |   |   |   |   |   popularity <= 64
+|   |   |   |   |   |   |   |   popularity <= 18
+|   |   |   |   |   |   |   |   |   danceability <= 0.598: pop (2.0/1.0)
+|   |   |   |   |   |   |   |   |   danceability > 0.598: HipHop (2.0)
+|   |   |   |   |   |   |   |   popularity > 18
+|   |   |   |   |   |   |   |   |   year <= 2002
+|   |   |   |   |   |   |   |   |   |   popularity <= 51: rock (2.0)
+|   |   |   |   |   |   |   |   |   |   popularity > 51: pop (28.0/1.0)
+|   |   |   |   |   |   |   |   |   year > 2002
+|   |   |   |   |   |   |   |   |   |   instrumentalness <= 0.000353
+|   |   |   |   |   |   |   |   |   |   |   tempo <= 127.973
+|   |   |   |   |   |   |   |   |   |   |   |   speechiness <= 0.0409
+|   |   |   |   |   |   |   |   |   |   |   |   |   liveness <= 0.108: HipHop (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   liveness > 0.108: pop (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   speechiness > 0.0409: HipHop (4.0)
+|   |   |   |   |   |   |   |   |   |   |   tempo > 127.973
+|   |   |   |   |   |   |   |   |   |   |   |   energy <= 0.819: pop (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   energy > 0.819
+|   |   |   |   |   |   |   |   |   |   |   |   |   acousticness <= 0.00459: pop (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   acousticness > 0.00459: rock (2.0)
+|   |   |   |   |   |   |   |   |   |   instrumentalness > 0.000353: rock (5.0/1.0)
+|   |   |   |   |   |   |   popularity > 64
+|   |   |   |   |   |   |   |   loudness <= -3.904
+|   |   |   |   |   |   |   |   |   danceability <= 0.455
+|   |   |   |   |   |   |   |   |   |   speechiness <= 0.05: rock (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   speechiness > 0.05: pop (2.0/1.0)
+|   |   |   |   |   |   |   |   |   danceability > 0.455
+|   |   |   |   |   |   |   |   |   |   popularity <= 79
+|   |   |   |   |   |   |   |   |   |   |   energy <= 0.791: pop (18.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   energy > 0.791
+|   |   |   |   |   |   |   |   |   |   |   |   instrumentalness <= 0.000066
+|   |   |   |   |   |   |   |   |   |   |   |   |   artist <= 211
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   year <= 2002
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   danceability <= 0.546: pop (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   danceability > 0.546: rock (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   year > 2002: rock (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   artist > 211: pop (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   instrumentalness > 0.000066: pop (3.0)
+|   |   |   |   |   |   |   |   |   |   popularity > 79: rock (4.0)
+|   |   |   |   |   |   |   |   loudness > -3.904: rock (10.0/1.0)
+|   |   |   |   |   |   artist > 295: rock (9.0/1.0)
+|   |   |   |   |   artist > 315
+|   |   |   |   |   |   valence <= 0.577
+|   |   |   |   |   |   |   popularity <= 79
+|   |   |   |   |   |   |   |   danceability <= 0.594: pop (86.0/16.0)
+|   |   |   |   |   |   |   |   danceability > 0.594
+|   |   |   |   |   |   |   |   |   instrumentalness <= 0.000409
+|   |   |   |   |   |   |   |   |   |   year <= 2009: pop (5.0)
+|   |   |   |   |   |   |   |   |   |   year > 2009
+|   |   |   |   |   |   |   |   |   |   |   mode <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   popularity <= 59
+|   |   |   |   |   |   |   |   |   |   |   |   |   speechiness <= 0.0361: pop (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   speechiness > 0.0361: HipHop (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   popularity > 59: pop (3.0)
+|   |   |   |   |   |   |   |   |   |   |   mode > 0
+|   |   |   |   |   |   |   |   |   |   |   |   acousticness <= 0.279
+|   |   |   |   |   |   |   |   |   |   |   |   |   popularity <= 76: HipHop (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   popularity > 76: pop (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   acousticness > 0.279: pop (4.0)
+|   |   |   |   |   |   |   |   |   instrumentalness > 0.000409
+|   |   |   |   |   |   |   |   |   |   popularity <= 69: pop (4.0)
+|   |   |   |   |   |   |   |   |   |   popularity > 69: rock (2.0/1.0)
+|   |   |   |   |   |   |   popularity > 79
+|   |   |   |   |   |   |   |   duration_ms <= 221426: rock (3.0)
+|   |   |   |   |   |   |   |   duration_ms > 221426: pop (4.0/1.0)
+|   |   |   |   |   |   valence > 0.577
+|   |   |   |   |   |   |   popularity <= 57
+|   |   |   |   |   |   |   |   mode <= 0: pop (3.0/1.0)
+|   |   |   |   |   |   |   |   mode > 0
+|   |   |   |   |   |   |   |   |   speechiness <= 0.039: country (5.0/1.0)
+|   |   |   |   |   |   |   |   |   speechiness > 0.039: pop (3.0)
+|   |   |   |   |   |   |   popularity > 57
+|   |   |   |   |   |   |   |   instrumentalness <= 0.000512
+|   |   |   |   |   |   |   |   |   year <= 2008: rock (4.0/1.0)
+|   |   |   |   |   |   |   |   |   year > 2008
+|   |   |   |   |   |   |   |   |   |   loudness <= -5.503: rock (2.0)
+|   |   |   |   |   |   |   |   |   |   loudness > -5.503: pop (16.0/1.0)
+|   |   |   |   |   |   |   |   instrumentalness > 0.000512: rock (2.0)
+|   |   |   speechiness > 0.054
+|   |   |   |   year <= 2007
+|   |   |   |   |   energy <= 0.761
+|   |   |   |   |   |   valence <= 0.607
+|   |   |   |   |   |   |   mode <= 0
+|   |   |   |   |   |   |   |   danceability <= 0.564: HipHop (5.0/1.0)
+|   |   |   |   |   |   |   |   danceability > 0.564: pop (4.0)
+|   |   |   |   |   |   |   mode > 0
+|   |   |   |   |   |   |   |   acousticness <= 0.147
+|   |   |   |   |   |   |   |   |   energy <= 0.721: HipHop (4.0/1.0)
+|   |   |   |   |   |   |   |   |   energy > 0.721: pop (2.0)
+|   |   |   |   |   |   |   |   acousticness > 0.147: pop (7.0)
+|   |   |   |   |   |   valence > 0.607: HipHop (8.0/1.0)
+|   |   |   |   |   energy > 0.761
+|   |   |   |   |   |   popularity <= 72
+|   |   |   |   |   |   |   tempo <= 132.612
+|   |   |   |   |   |   |   |   year <= 2005: pop (8.0)
+|   |   |   |   |   |   |   |   year > 2005: HipHop (3.0/1.0)
+|   |   |   |   |   |   |   tempo > 132.612
+|   |   |   |   |   |   |   |   instrumentalness <= 0.000833
+|   |   |   |   |   |   |   |   |   instrumentalness <= 0.000052
+|   |   |   |   |   |   |   |   |   |   valence <= 0.701
+|   |   |   |   |   |   |   |   |   |   |   liveness <= 0.124: rock (6.0)
+|   |   |   |   |   |   |   |   |   |   |   liveness > 0.124
+|   |   |   |   |   |   |   |   |   |   |   |   loudness <= -4.442: rock (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   loudness > -4.442: pop (5.0)
+|   |   |   |   |   |   |   |   |   |   valence > 0.701: pop (6.0)
+|   |   |   |   |   |   |   |   |   instrumentalness > 0.000052: pop (3.0)
+|   |   |   |   |   |   |   |   instrumentalness > 0.000833: rock (3.0/1.0)
+|   |   |   |   |   |   popularity > 72: rock (14.0/1.0)
+|   |   |   |   year > 2007
+|   |   |   |   |   artist <= 445
+|   |   |   |   |   |   tempo <= 146.349
+|   |   |   |   |   |   |   year <= 2009
+|   |   |   |   |   |   |   |   mode <= 0: pop (7.0/1.0)
+|   |   |   |   |   |   |   |   mode > 0
+|   |   |   |   |   |   |   |   |   popularity <= 58: pop (2.0)
+|   |   |   |   |   |   |   |   |   popularity > 58
+|   |   |   |   |   |   |   |   |   |   duration_ms <= 255093: rock (2.0)
+|   |   |   |   |   |   |   |   |   |   duration_ms > 255093: HipHop (2.0)
+|   |   |   |   |   |   |   year > 2009
+|   |   |   |   |   |   |   |   year <= 2016
+|   |   |   |   |   |   |   |   |   loudness <= -6.221: pop (2.0)
+|   |   |   |   |   |   |   |   |   loudness > -6.221: HipHop (30.0/2.0)
+|   |   |   |   |   |   |   |   year > 2016
+|   |   |   |   |   |   |   |   |   valence <= 0.504: pop (3.0)
+|   |   |   |   |   |   |   |   |   valence > 0.504: HipHop (3.0/1.0)
+|   |   |   |   |   |   tempo > 146.349
+|   |   |   |   |   |   |   speechiness <= 0.0813: rock (2.0)
+|   |   |   |   |   |   |   speechiness > 0.0813: pop (11.0/1.0)
+|   |   |   |   |   artist > 445
+|   |   |   |   |   |   instrumentalness <= 0.000064
+|   |   |   |   |   |   |   tempo <= 75.087: rock (2.0/1.0)
+|   |   |   |   |   |   |   tempo > 75.087
+|   |   |   |   |   |   |   |   duration_ms <= 213986: pop (41.0/8.0)
+|   |   |   |   |   |   |   |   duration_ms > 213986
+|   |   |   |   |   |   |   |   |   tempo <= 142.881
+|   |   |   |   |   |   |   |   |   |   duration_ms <= 217946: HipHop (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   duration_ms > 217946
+|   |   |   |   |   |   |   |   |   |   |   popularity <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   speechiness <= 0.123: HipHop (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   speechiness > 0.123: pop (3.0)
+|   |   |   |   |   |   |   |   |   |   |   popularity > 1: pop (13.0)
+|   |   |   |   |   |   |   |   |   tempo > 142.881: HipHop (10.0/2.0)
+|   |   |   |   |   |   instrumentalness > 0.000064
+|   |   |   |   |   |   |   valence <= 0.562: pop (10.0/2.0)
+|   |   |   |   |   |   |   valence > 0.562
+|   |   |   |   |   |   |   |   artist <= 662: rock (2.0)
+|   |   |   |   |   |   |   |   artist > 662: HipHop (2.0/1.0)
+|   |   danceability > 0.645
+|   |   |   artist <= 518
+|   |   |   |   artist <= 54
+|   |   |   |   |   speechiness <= 0.0764: pop (51.0/1.0)
+|   |   |   |   |   speechiness > 0.0764
+|   |   |   |   |   |   speechiness <= 0.0876: HipHop (6.0/1.0)
+|   |   |   |   |   |   speechiness > 0.0876
+|   |   |   |   |   |   |   artist <= 38: pop (17.0/1.0)
+|   |   |   |   |   |   |   artist > 38
+|   |   |   |   |   |   |   |   popularity <= 63
+|   |   |   |   |   |   |   |   |   artist <= 48: HipHop (6.0/1.0)
+|   |   |   |   |   |   |   |   |   artist > 48: pop (2.0)
+|   |   |   |   |   |   |   |   popularity > 63: ReB (2.0)
+|   |   |   |   artist > 54
+|   |   |   |   |   speechiness <= 0.0479
+|   |   |   |   |   |   instrumentalness <= 0.00372
+|   |   |   |   |   |   |   acousticness <= 0.00249: pop (14.0)
+|   |   |   |   |   |   |   acousticness > 0.00249
+|   |   |   |   |   |   |   |   popularity <= 59
+|   |   |   |   |   |   |   |   |   tempo <= 102.847
+|   |   |   |   |   |   |   |   |   |   artist <= 253
+|   |   |   |   |   |   |   |   |   |   |   acousticness <= 0.0373: HipHop (6.0)
+|   |   |   |   |   |   |   |   |   |   |   acousticness > 0.0373: pop (2.0)
+|   |   |   |   |   |   |   |   |   |   artist > 253
+|   |   |   |   |   |   |   |   |   |   |   energy <= 0.678: ReB (2.0)
+|   |   |   |   |   |   |   |   |   |   |   energy > 0.678: pop (2.0)
+|   |   |   |   |   |   |   |   |   tempo > 102.847: pop (27.0/3.0)
+|   |   |   |   |   |   |   |   popularity > 59
+|   |   |   |   |   |   |   |   |   popularity <= 75
+|   |   |   |   |   |   |   |   |   |   year <= 2008
+|   |   |   |   |   |   |   |   |   |   |   danceability <= 0.681: HipHop (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   danceability > 0.681
+|   |   |   |   |   |   |   |   |   |   |   |   valence <= 0.357: HipHop (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   valence > 0.357: pop (26.0/2.0)
+|   |   |   |   |   |   |   |   |   |   year > 2008
+|   |   |   |   |   |   |   |   |   |   |   tempo <= 125.358
+|   |   |   |   |   |   |   |   |   |   |   |   instrumentalness <= 0.00066
+|   |   |   |   |   |   |   |   |   |   |   |   |   danceability <= 0.757
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   energy <= 0.621: HipHop (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   energy > 0.621: pop (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   danceability > 0.757: HipHop (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   instrumentalness > 0.00066: pop (3.0)
+|   |   |   |   |   |   |   |   |   |   |   tempo > 125.358: HipHop (15.0/1.0)
+|   |   |   |   |   |   |   |   |   popularity > 75
+|   |   |   |   |   |   |   |   |   |   energy <= 0.763
+|   |   |   |   |   |   |   |   |   |   |   loudness <= -5.207: rock (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   loudness > -5.207: pop (10.0)
+|   |   |   |   |   |   |   |   |   |   energy > 0.763
+|   |   |   |   |   |   |   |   |   |   |   duration_ms <= 215413: pop (2.0)
+|   |   |   |   |   |   |   |   |   |   |   duration_ms > 215413: HipHop (5.0)
+|   |   |   |   |   |   instrumentalness > 0.00372
+|   |   |   |   |   |   |   mode <= 0: Dance_Electronic (3.0/1.0)
+|   |   |   |   |   |   |   mode > 0
+|   |   |   |   |   |   |   |   instrumentalness <= 0.00682
+|   |   |   |   |   |   |   |   |   artist <= 293: pop (2.0)
+|   |   |   |   |   |   |   |   |   artist > 293: rock (2.0/1.0)
+|   |   |   |   |   |   |   |   instrumentalness > 0.00682: HipHop (5.0/1.0)
+|   |   |   |   |   speechiness > 0.0479
+|   |   |   |   |   |   year <= 2001
+|   |   |   |   |   |   |   year <= 1999: rock (3.0/1.0)
+|   |   |   |   |   |   |   year > 1999
+|   |   |   |   |   |   |   |   energy <= 0.87
+|   |   |   |   |   |   |   |   |   artist <= 132
+|   |   |   |   |   |   |   |   |   |   year <= 2000: HipHop (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   year > 2000
+|   |   |   |   |   |   |   |   |   |   |   artist <= 97: pop (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   artist > 97: HipHop (5.0)
+|   |   |   |   |   |   |   |   |   artist > 132: pop (5.0/1.0)
+|   |   |   |   |   |   |   |   energy > 0.87
+|   |   |   |   |   |   |   |   |   liveness <= 0.119: pop (2.0)
+|   |   |   |   |   |   |   |   |   liveness > 0.119: rock (3.0/1.0)
+|   |   |   |   |   |   year > 2001
+|   |   |   |   |   |   |   year <= 2017
+|   |   |   |   |   |   |   |   acousticness <= 0.3
+|   |   |   |   |   |   |   |   |   acousticness <= 0.00206
+|   |   |   |   |   |   |   |   |   |   acousticness <= 0.00181
+|   |   |   |   |   |   |   |   |   |   |   year <= 2004: pop (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   year > 2004: HipHop (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   acousticness > 0.00181: rock (2.0/1.0)
+|   |   |   |   |   |   |   |   |   acousticness > 0.00206
+|   |   |   |   |   |   |   |   |   |   tempo <= 100.969
+|   |   |   |   |   |   |   |   |   |   |   instrumentalness <= 0.00015
+|   |   |   |   |   |   |   |   |   |   |   |   loudness <= -5.207
+|   |   |   |   |   |   |   |   |   |   |   |   |   speechiness <= 0.0939
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   mode <= 0: pop (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   mode > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   duration_ms <= 230613: HipHop (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   duration_ms > 230613: pop (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   speechiness > 0.0939
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   danceability <= 0.655: pop (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   danceability > 0.655: HipHop (18.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   loudness > -5.207: HipHop (24.0)
+|   |   |   |   |   |   |   |   |   |   |   instrumentalness > 0.00015
+|   |   |   |   |   |   |   |   |   |   |   |   mode <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   artist <= 275: HipHop (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   artist > 275: pop (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   mode > 0: pop (4.0)
+|   |   |   |   |   |   |   |   |   |   tempo > 100.969
+|   |   |   |   |   |   |   |   |   |   |   popularity <= 80
+|   |   |   |   |   |   |   |   |   |   |   |   mode <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   loudness <= -4.871
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   duration_ms <= 283733
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   acousticness <= 0.00523: HipHop (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   acousticness > 0.00523
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   artist <= 390
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   artist <= 355
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   energy <= 0.816
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   valence <= 0.551
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   duration_ms <= 259102: pop (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   duration_ms > 259102: HipHop (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   valence > 0.551: pop (14.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   energy > 0.816: HipHop (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   artist > 355: HipHop (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   artist > 390: pop (12.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   duration_ms > 283733: HipHop (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   loudness > -4.871: HipHop (37.0/10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   mode > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   instrumentalness <= 0.00109
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   loudness <= -6.759: HipHop (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   loudness > -6.759
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   year <= 2012
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   speechiness <= 0.132: pop (25.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   speechiness > 0.132: HipHop (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   year > 2012: pop (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   instrumentalness > 0.00109: pop (6.0)
+|   |   |   |   |   |   |   |   |   |   |   popularity > 80: HipHop (6.0)
+|   |   |   |   |   |   |   |   acousticness > 0.3
+|   |   |   |   |   |   |   |   |   liveness <= 0.287
+|   |   |   |   |   |   |   |   |   |   acousticness <= 0.34: Dance_Electronic (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   acousticness > 0.34
+|   |   |   |   |   |   |   |   |   |   |   instrumentalness <= 0.000678: HipHop (15.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   instrumentalness > 0.000678: pop (2.0)
+|   |   |   |   |   |   |   |   |   liveness > 0.287: World_Traditional (2.0)
+|   |   |   |   |   |   |   year > 2017
+|   |   |   |   |   |   |   |   energy <= 0.786: pop (4.0)
+|   |   |   |   |   |   |   |   energy > 0.786
+|   |   |   |   |   |   |   |   |   energy <= 0.861: latin (2.0)
+|   |   |   |   |   |   |   |   |   energy > 0.861: HipHop (3.0)
+|   |   |   artist > 518
+|   |   |   |   artist <= 704
+|   |   |   |   |   popularity <= 79
+|   |   |   |   |   |   acousticness <= 0.654: pop (127.0/16.0)
+|   |   |   |   |   |   acousticness > 0.654: HipHop (2.0)
+|   |   |   |   |   popularity > 79
+|   |   |   |   |   |   mode <= 0
+|   |   |   |   |   |   |   artist <= 648: rock (4.0/1.0)
+|   |   |   |   |   |   |   artist > 648: pop (2.0)
+|   |   |   |   |   |   mode > 0
+|   |   |   |   |   |   |   duration_ms <= 210066: HipHop (5.0/2.0)
+|   |   |   |   |   |   |   duration_ms > 210066: pop (4.0)
+|   |   |   |   artist > 704
+|   |   |   |   |   popularity <= 57: pop (12.0/2.0)
+|   |   |   |   |   popularity > 57
+|   |   |   |   |   |   tempo <= 144.142
+|   |   |   |   |   |   |   instrumentalness <= 0.000221
+|   |   |   |   |   |   |   |   loudness <= -4.321
+|   |   |   |   |   |   |   |   |   popularity <= 72: HipHop (6.0)
+|   |   |   |   |   |   |   |   |   popularity > 72
+|   |   |   |   |   |   |   |   |   |   duration_ms <= 171029: HipHop (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   duration_ms > 171029: pop (4.0)
+|   |   |   |   |   |   |   |   loudness > -4.321: pop (9.0/1.0)
+|   |   |   |   |   |   |   instrumentalness > 0.000221
+|   |   |   |   |   |   |   |   danceability <= 0.765: pop (2.0/1.0)
+|   |   |   |   |   |   |   |   danceability > 0.765: latin (3.0)
+|   |   |   |   |   |   tempo > 144.142
+|   |   |   |   |   |   |   energy <= 0.575: rock (2.0)
+|   |   |   |   |   |   |   energy > 0.575: HipHop (5.0/1.0)
+|   instrumentalness > 0.0102
+|   |   artist <= 56
+|   |   |   liveness <= 0.0956
+|   |   |   |   speechiness <= 0.0423: Dance_Electronic (2.0)
+|   |   |   |   speechiness > 0.0423: pop (4.0/1.0)
+|   |   |   liveness > 0.0956: pop (13.0)
+|   |   artist > 56
+|   |   |   instrumentalness <= 0.0177
+|   |   |   |   instrumentalness <= 0.0115: rock (6.0)
+|   |   |   |   instrumentalness > 0.0115
+|   |   |   |   |   speechiness <= 0.0437
+|   |   |   |   |   |   artist <= 221: rock (3.0)
+|   |   |   |   |   |   artist > 221
+|   |   |   |   |   |   |   loudness <= -3.689: pop (5.0)
+|   |   |   |   |   |   |   loudness > -3.689: rock (2.0)
+|   |   |   |   |   speechiness > 0.0437: pop (5.0)
+|   |   |   instrumentalness > 0.0177
+|   |   |   |   danceability <= 0.474
+|   |   |   |   |   artist <= 582
+|   |   |   |   |   |   energy <= 0.921: World_Traditional (2.0)
+|   |   |   |   |   |   energy > 0.921: Dance_Electronic (2.0)
+|   |   |   |   |   artist > 582: pop (2.0/1.0)
+|   |   |   |   danceability > 0.474
+|   |   |   |   |   year <= 2004
+|   |   |   |   |   |   instrumentalness <= 0.154
+|   |   |   |   |   |   |   popularity <= 63: Dance_Electronic (5.0/1.0)
+|   |   |   |   |   |   |   popularity > 63: pop (4.0)
+|   |   |   |   |   |   instrumentalness > 0.154
+|   |   |   |   |   |   |   speechiness <= 0.104
+|   |   |   |   |   |   |   |   duration_ms <= 238266: rock (5.0)
+|   |   |   |   |   |   |   |   duration_ms > 238266: World_Traditional (2.0)
+|   |   |   |   |   |   |   speechiness > 0.104: pop (3.0/1.0)
+|   |   |   |   |   year > 2004
+|   |   |   |   |   |   tempo <= 116.097
+|   |   |   |   |   |   |   speechiness <= 0.0828
+|   |   |   |   |   |   |   |   speechiness <= 0.0416: rock (3.0)
+|   |   |   |   |   |   |   |   speechiness > 0.0416: Dance_Electronic (3.0)
+|   |   |   |   |   |   |   speechiness > 0.0828: HipHop (5.0)
+|   |   |   |   |   |   tempo > 116.097
+|   |   |   |   |   |   |   artist <= 427
+|   |   |   |   |   |   |   |   energy <= 0.863
+|   |   |   |   |   |   |   |   |   artist <= 196: Dance_Electronic (2.0)
+|   |   |   |   |   |   |   |   |   artist > 196: HipHop (8.0)
+|   |   |   |   |   |   |   |   energy > 0.863
+|   |   |   |   |   |   |   |   |   popularity <= 68
+|   |   |   |   |   |   |   |   |   |   energy <= 0.95: pop (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   energy > 0.95: HipHop (2.0)
+|   |   |   |   |   |   |   |   |   popularity > 68
+|   |   |   |   |   |   |   |   |   |   duration_ms <= 266086: HipHop (2.0)
+|   |   |   |   |   |   |   |   |   |   duration_ms > 266086: rock (2.0)
+|   |   |   |   |   |   |   artist > 427
+|   |   |   |   |   |   |   |   year <= 2009: rock (2.0)
+|   |   |   |   |   |   |   |   year > 2009
+|   |   |   |   |   |   |   |   |   loudness <= -3.75
+|   |   |   |   |   |   |   |   |   |   danceability <= 0.843: pop (19.0/2.0)
+|   |   |   |   |   |   |   |   |   |   danceability > 0.843: Dance_Electronic (3.0/1.0)
+|   |   |   |   |   |   |   |   |   loudness > -3.75: Dance_Electronic (2.0)
+explicit = True
+|   speechiness <= 0.104
+|   |   danceability <= 0.53
+|   |   |   energy <= 0.514: HipHop (3.0/2.0)
+|   |   |   energy > 0.514
+|   |   |   |   year <= 2010: rock (6.0/1.0)
+|   |   |   |   year > 2010: pop (5.0/1.0)
+|   |   danceability > 0.53
+|   |   |   energy <= 0.864
+|   |   |   |   liveness <= 0.094
+|   |   |   |   |   popularity <= 58
+|   |   |   |   |   |   liveness <= 0.0651: Dance_Electronic (3.0/1.0)
+|   |   |   |   |   |   liveness > 0.0651: pop (6.0)
+|   |   |   |   |   popularity > 58
+|   |   |   |   |   |   popularity <= 75
+|   |   |   |   |   |   |   mode <= 0
+|   |   |   |   |   |   |   |   artist <= 587
+|   |   |   |   |   |   |   |   |   energy <= 0.546: pop (2.0)
+|   |   |   |   |   |   |   |   |   energy > 0.546: HipHop (6.0)
+|   |   |   |   |   |   |   |   artist > 587: pop (3.0)
+|   |   |   |   |   |   |   mode > 0
+|   |   |   |   |   |   |   |   danceability <= 0.598: pop (2.0)
+|   |   |   |   |   |   |   |   danceability > 0.598: HipHop (19.0/2.0)
+|   |   |   |   |   |   popularity > 75
+|   |   |   |   |   |   |   loudness <= -4.977: pop (8.0)
+|   |   |   |   |   |   |   loudness > -4.977: HipHop (3.0/1.0)
+|   |   |   |   liveness > 0.094
+|   |   |   |   |   artist <= 625
+|   |   |   |   |   |   artist <= 542
+|   |   |   |   |   |   |   artist <= 248
+|   |   |   |   |   |   |   |   artist <= 228
+|   |   |   |   |   |   |   |   |   year <= 2013: HipHop (25.0/4.0)
+|   |   |   |   |   |   |   |   |   year > 2013: pop (2.0)
+|   |   |   |   |   |   |   |   artist > 228: pop (6.0)
+|   |   |   |   |   |   |   artist > 248
+|   |   |   |   |   |   |   |   danceability <= 0.662
+|   |   |   |   |   |   |   |   |   artist <= 304: HipHop (5.0)
+|   |   |   |   |   |   |   |   |   artist > 304: pop (7.0/2.0)
+|   |   |   |   |   |   |   |   danceability > 0.662
+|   |   |   |   |   |   |   |   |   valence <= 0.904: HipHop (43.0/1.0)
+|   |   |   |   |   |   |   |   |   valence > 0.904: pop (2.0)
+|   |   |   |   |   |   artist > 542
+|   |   |   |   |   |   |   year <= 2014: HipHop (3.0/1.0)
+|   |   |   |   |   |   |   year > 2014: pop (6.0)
+|   |   |   |   |   artist > 625: HipHop (38.0/5.0)
+|   |   |   energy > 0.864
+|   |   |   |   instrumentalness <= 0.00233
+|   |   |   |   |   duration_ms <= 194213
+|   |   |   |   |   |   artist <= 466: rock (2.0)
+|   |   |   |   |   |   artist > 466: pop (3.0)
+|   |   |   |   |   duration_ms > 194213
+|   |   |   |   |   |   mode <= 0: pop (7.0/1.0)
+|   |   |   |   |   |   mode > 0
+|   |   |   |   |   |   |   acousticness <= 0.00327: pop (4.0)
+|   |   |   |   |   |   |   acousticness > 0.00327: HipHop (5.0)
+|   |   |   |   instrumentalness > 0.00233: rock (3.0/1.0)
+|   speechiness > 0.104
+|   |   artist <= 738
+|   |   |   popularity <= 67
+|   |   |   |   year <= 2014: HipHop (138.0/12.0)
+|   |   |   |   year > 2014
+|   |   |   |   |   artist <= 680
+|   |   |   |   |   |   duration_ms <= 240493
+|   |   |   |   |   |   |   energy <= 0.572: HipHop (3.0)
+|   |   |   |   |   |   |   energy > 0.572: pop (9.0)
+|   |   |   |   |   |   duration_ms > 240493: HipHop (4.0)
+|   |   |   |   |   artist > 680: HipHop (9.0)
+|   |   |   popularity > 67
+|   |   |   |   year <= 2018: HipHop (132.0/5.0)
+|   |   |   |   year > 2018
+|   |   |   |   |   danceability <= 0.803: pop (2.0)
+|   |   |   |   |   danceability > 0.803: HipHop (3.0)
+|   |   artist > 738
+|   |   |   duration_ms <= 245866: HipHop (19.0/1.0)
+|   |   |   duration_ms > 245866: latin (3.0/1.0)
+
+Number of Leaves  : 	232
+
+Size of the tree : 	463
+
+
+Time taken to build model: 0.12 seconds
+
+
+=== Classifier model for training split (1385 instances) ===
+
+J48 pruned tree
+------------------
+
+explicit = False
+|   danceability <= 0.623
+|   |   acousticness <= 0.000941
+|   |   |   year <= 2009
+|   |   |   |   mode <= 0
+|   |   |   |   |   artist <= 369
+|   |   |   |   |   |   acousticness <= 0.000441: rock (5.0)
+|   |   |   |   |   |   acousticness > 0.000441: pop (3.0/1.0)
+|   |   |   |   |   artist > 369: pop (2.0)
+|   |   |   |   mode > 0
+|   |   |   |   |   acousticness <= 0.000068: pop (2.0/1.0)
+|   |   |   |   |   acousticness > 0.000068: rock (13.0/1.0)
+|   |   |   year > 2009
+|   |   |   |   year <= 2011
+|   |   |   |   |   popularity <= 62: HipHop (2.0)
+|   |   |   |   |   popularity > 62: rock (2.0)
+|   |   |   |   year > 2011: pop (3.0)
+|   |   acousticness > 0.000941
+|   |   |   speechiness <= 0.0447
+|   |   |   |   instrumentalness <= 0.447
+|   |   |   |   |   popularity <= 67
+|   |   |   |   |   |   artist <= 442: pop (82.0/8.0)
+|   |   |   |   |   |   artist > 442
+|   |   |   |   |   |   |   valence <= 0.559
+|   |   |   |   |   |   |   |   danceability <= 0.605: pop (21.0/3.0)
+|   |   |   |   |   |   |   |   danceability > 0.605: HipHop (2.0/1.0)
+|   |   |   |   |   |   |   valence > 0.559: country (5.0/1.0)
+|   |   |   |   |   popularity > 67
+|   |   |   |   |   |   artist <= 214
+|   |   |   |   |   |   |   valence <= 0.121: metal (2.0)
+|   |   |   |   |   |   |   valence > 0.121
+|   |   |   |   |   |   |   |   instrumentalness <= 0.000065
+|   |   |   |   |   |   |   |   |   speechiness <= 0.0358
+|   |   |   |   |   |   |   |   |   |   loudness <= -5.582: pop (5.0)
+|   |   |   |   |   |   |   |   |   |   loudness > -5.582
+|   |   |   |   |   |   |   |   |   |   |   loudness <= -5.166: rock (4.0)
+|   |   |   |   |   |   |   |   |   |   |   loudness > -5.166: pop (4.0/1.0)
+|   |   |   |   |   |   |   |   |   speechiness > 0.0358: rock (5.0)
+|   |   |   |   |   |   |   |   instrumentalness > 0.000065: rock (5.0)
+|   |   |   |   |   |   artist > 214
+|   |   |   |   |   |   |   danceability <= 0.605
+|   |   |   |   |   |   |   |   valence <= 0.77: pop (32.0/3.0)
+|   |   |   |   |   |   |   |   valence > 0.77: rock (2.0)
+|   |   |   |   |   |   |   danceability > 0.605
+|   |   |   |   |   |   |   |   instrumentalness <= 0.000425
+|   |   |   |   |   |   |   |   |   artist <= 425: HipHop (4.0/1.0)
+|   |   |   |   |   |   |   |   |   artist > 425: pop (3.0)
+|   |   |   |   |   |   |   |   instrumentalness > 0.000425: rock (2.0)
+|   |   |   |   instrumentalness > 0.447
+|   |   |   |   |   artist <= 346: World_Traditional (2.0)
+|   |   |   |   |   artist > 346: pop (2.0/1.0)
+|   |   |   speechiness > 0.0447
+|   |   |   |   popularity <= 78
+|   |   |   |   |   speechiness <= 0.0646
+|   |   |   |   |   |   year <= 2017
+|   |   |   |   |   |   |   instrumentalness <= 0.000087
+|   |   |   |   |   |   |   |   loudness <= -3.495
+|   |   |   |   |   |   |   |   |   mode <= 0
+|   |   |   |   |   |   |   |   |   |   tempo <= 139.631
+|   |   |   |   |   |   |   |   |   |   |   artist <= 361
+|   |   |   |   |   |   |   |   |   |   |   |   liveness <= 0.101: pop (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   liveness > 0.101: HipHop (3.0)
+|   |   |   |   |   |   |   |   |   |   |   artist > 361: pop (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   tempo > 139.631: Dance_Electronic (3.0/1.0)
+|   |   |   |   |   |   |   |   |   mode > 0: pop (18.0/3.0)
+|   |   |   |   |   |   |   |   loudness > -3.495: HipHop (5.0/1.0)
+|   |   |   |   |   |   |   instrumentalness > 0.000087
+|   |   |   |   |   |   |   |   year <= 2000: pop (2.0/1.0)
+|   |   |   |   |   |   |   |   year > 2000
+|   |   |   |   |   |   |   |   |   popularity <= 59
+|   |   |   |   |   |   |   |   |   |   artist <= 550: pop (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   artist > 550: Dance_Electronic (3.0/1.0)
+|   |   |   |   |   |   |   |   |   popularity > 59
+|   |   |   |   |   |   |   |   |   |   duration_ms <= 220053: rock (4.0)
+|   |   |   |   |   |   |   |   |   |   duration_ms > 220053
+|   |   |   |   |   |   |   |   |   |   |   speechiness <= 0.0562: pop (5.0)
+|   |   |   |   |   |   |   |   |   |   |   speechiness > 0.0562: rock (2.0)
+|   |   |   |   |   |   year > 2017: Dance_Electronic (2.0/1.0)
+|   |   |   |   |   speechiness > 0.0646
+|   |   |   |   |   |   year <= 2015
+|   |   |   |   |   |   |   danceability <= 0.617
+|   |   |   |   |   |   |   |   danceability <= 0.61
+|   |   |   |   |   |   |   |   |   tempo <= 132.612
+|   |   |   |   |   |   |   |   |   |   tempo <= 127.002
+|   |   |   |   |   |   |   |   |   |   |   instrumentalness <= 0.00197
+|   |   |   |   |   |   |   |   |   |   |   |   artist <= 482
+|   |   |   |   |   |   |   |   |   |   |   |   |   popularity <= 57: pop (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   popularity > 57
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   danceability <= 0.585: HipHop (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   danceability > 0.585: pop (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   artist > 482: pop (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   instrumentalness > 0.00197
+|   |   |   |   |   |   |   |   |   |   |   |   instrumentalness <= 0.0167: rock (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   instrumentalness > 0.0167: HipHop (2.0)
+|   |   |   |   |   |   |   |   |   |   tempo > 127.002: HipHop (12.0)
+|   |   |   |   |   |   |   |   |   tempo > 132.612
+|   |   |   |   |   |   |   |   |   |   year <= 2001: HipHop (2.0)
+|   |   |   |   |   |   |   |   |   |   year > 2001
+|   |   |   |   |   |   |   |   |   |   |   valence <= 0.255: HipHop (2.0)
+|   |   |   |   |   |   |   |   |   |   |   valence > 0.255
+|   |   |   |   |   |   |   |   |   |   |   |   year <= 2007
+|   |   |   |   |   |   |   |   |   |   |   |   |   tempo <= 150.231: rock (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   tempo > 150.231
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   popularity <= 73: pop (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   popularity > 73: rock (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   year > 2007: pop (8.0)
+|   |   |   |   |   |   |   |   danceability > 0.61: HipHop (7.0)
+|   |   |   |   |   |   |   danceability > 0.617
+|   |   |   |   |   |   |   |   valence <= 0.561: rock (2.0)
+|   |   |   |   |   |   |   |   valence > 0.561: pop (5.0/1.0)
+|   |   |   |   |   |   year > 2015
+|   |   |   |   |   |   |   acousticness <= 0.2: pop (19.0/3.0)
+|   |   |   |   |   |   |   acousticness > 0.2
+|   |   |   |   |   |   |   |   mode <= 0: HipHop (2.0)
+|   |   |   |   |   |   |   |   mode > 0: ReB (3.0/1.0)
+|   |   |   |   popularity > 78
+|   |   |   |   |   artist <= 540
+|   |   |   |   |   |   speechiness <= 0.0847: rock (10.0/1.0)
+|   |   |   |   |   |   speechiness > 0.0847: HipHop (3.0)
+|   |   |   |   |   artist > 540: pop (5.0/1.0)
+|   danceability > 0.623
+|   |   instrumentalness <= 0.00492
+|   |   |   speechiness <= 0.166
+|   |   |   |   year <= 2016
+|   |   |   |   |   artist <= 501
+|   |   |   |   |   |   year <= 2003
+|   |   |   |   |   |   |   popularity <= 28: rock (3.0/1.0)
+|   |   |   |   |   |   |   popularity > 28: pop (82.0/15.0)
+|   |   |   |   |   |   year > 2003
+|   |   |   |   |   |   |   acousticness <= 0.00245
+|   |   |   |   |   |   |   |   popularity <= 16: HipHop (2.0)
+|   |   |   |   |   |   |   |   popularity > 16
+|   |   |   |   |   |   |   |   |   liveness <= 0.273: pop (19.0/2.0)
+|   |   |   |   |   |   |   |   |   liveness > 0.273: Dance_Electronic (2.0)
+|   |   |   |   |   |   |   acousticness > 0.00245
+|   |   |   |   |   |   |   |   artist <= 54
+|   |   |   |   |   |   |   |   |   danceability <= 0.814: pop (16.0)
+|   |   |   |   |   |   |   |   |   danceability > 0.814: HipHop (3.0/1.0)
+|   |   |   |   |   |   |   |   artist > 54
+|   |   |   |   |   |   |   |   |   artist <= 441
+|   |   |   |   |   |   |   |   |   |   year <= 2008
+|   |   |   |   |   |   |   |   |   |   |   tempo <= 89.996: HipHop (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   tempo > 89.996
+|   |   |   |   |   |   |   |   |   |   |   |   mode <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   speechiness <= 0.0503: pop (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   speechiness > 0.0503
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   speechiness <= 0.0699: HipHop (9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   speechiness > 0.0699
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   valence <= 0.383: HipHop (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   valence > 0.383: pop (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   mode > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   year <= 2004: HipHop (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   year > 2004
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   speechiness <= 0.0286: HipHop (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   speechiness > 0.0286: pop (31.0/8.0)
+|   |   |   |   |   |   |   |   |   |   year > 2008
+|   |   |   |   |   |   |   |   |   |   |   duration_ms <= 190973
+|   |   |   |   |   |   |   |   |   |   |   |   popularity <= 37: pop (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   popularity > 37: rock (2.0)
+|   |   |   |   |   |   |   |   |   |   |   duration_ms > 190973
+|   |   |   |   |   |   |   |   |   |   |   |   year <= 2013: HipHop (47.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   year > 2013
+|   |   |   |   |   |   |   |   |   |   |   |   |   year <= 2014: pop (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   year > 2014
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   energy <= 0.678
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   popularity <= 64: HipHop (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   popularity > 64: pop (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   energy > 0.678: HipHop (6.0)
+|   |   |   |   |   |   |   |   |   artist > 441
+|   |   |   |   |   |   |   |   |   |   energy <= 0.543: Dance_Electronic (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   energy > 0.543
+|   |   |   |   |   |   |   |   |   |   |   artist <= 457: pop (15.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   artist > 457
+|   |   |   |   |   |   |   |   |   |   |   |   popularity <= 71: pop (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   popularity > 71: HipHop (5.0)
+|   |   |   |   |   artist > 501
+|   |   |   |   |   |   popularity <= 79: pop (62.0/6.0)
+|   |   |   |   |   |   popularity > 79
+|   |   |   |   |   |   |   energy <= 0.714
+|   |   |   |   |   |   |   |   speechiness <= 0.0373: pop (3.0)
+|   |   |   |   |   |   |   |   speechiness > 0.0373: rock (2.0)
+|   |   |   |   |   |   |   energy > 0.714: HipHop (3.0)
+|   |   |   |   year > 2016
+|   |   |   |   |   year <= 2018
+|   |   |   |   |   |   tempo <= 98.082
+|   |   |   |   |   |   |   mode <= 0
+|   |   |   |   |   |   |   |   valence <= 0.437: HipHop (2.0/1.0)
+|   |   |   |   |   |   |   |   valence > 0.437: pop (6.0)
+|   |   |   |   |   |   |   mode > 0
+|   |   |   |   |   |   |   |   danceability <= 0.734: pop (2.0)
+|   |   |   |   |   |   |   |   danceability > 0.734: latin (3.0)
+|   |   |   |   |   |   tempo > 98.082
+|   |   |   |   |   |   |   popularity <= 78
+|   |   |   |   |   |   |   |   loudness <= -6.731: HipHop (2.0)
+|   |   |   |   |   |   |   |   loudness > -6.731
+|   |   |   |   |   |   |   |   |   artist <= 707: pop (19.0)
+|   |   |   |   |   |   |   |   |   artist > 707
+|   |   |   |   |   |   |   |   |   |   artist <= 720: HipHop (2.0)
+|   |   |   |   |   |   |   |   |   |   artist > 720
+|   |   |   |   |   |   |   |   |   |   |   energy <= 0.639: rock (2.0)
+|   |   |   |   |   |   |   |   |   |   |   energy > 0.639: pop (7.0/1.0)
+|   |   |   |   |   |   |   popularity > 78
+|   |   |   |   |   |   |   |   artist <= 565: rock (2.0)
+|   |   |   |   |   |   |   |   artist > 565: HipHop (2.0)
+|   |   |   |   |   year > 2018
+|   |   |   |   |   |   mode <= 0
+|   |   |   |   |   |   |   artist <= 444: HipHop (2.0/1.0)
+|   |   |   |   |   |   |   artist > 444: pop (10.0/1.0)
+|   |   |   |   |   |   mode > 0
+|   |   |   |   |   |   |   instrumentalness <= 0.000144
+|   |   |   |   |   |   |   |   loudness <= -4.321: HipHop (4.0/1.0)
+|   |   |   |   |   |   |   |   loudness > -4.321: pop (3.0)
+|   |   |   |   |   |   |   instrumentalness > 0.000144: HipHop (3.0/1.0)
+|   |   |   speechiness > 0.166
+|   |   |   |   popularity <= 16: pop (5.0)
+|   |   |   |   popularity > 16
+|   |   |   |   |   energy <= 0.467: pop (2.0/1.0)
+|   |   |   |   |   energy > 0.467
+|   |   |   |   |   |   tempo <= 96.306
+|   |   |   |   |   |   |   duration_ms <= 273533: HipHop (20.0)
+|   |   |   |   |   |   |   duration_ms > 273533
+|   |   |   |   |   |   |   |   artist <= 167: HipHop (2.0)
+|   |   |   |   |   |   |   |   artist > 167: pop (2.0)
+|   |   |   |   |   |   tempo > 96.306
+|   |   |   |   |   |   |   artist <= 36: pop (4.0)
+|   |   |   |   |   |   |   artist > 36
+|   |   |   |   |   |   |   |   valence <= 0.455: pop (4.0)
+|   |   |   |   |   |   |   |   valence > 0.455
+|   |   |   |   |   |   |   |   |   mode <= 0
+|   |   |   |   |   |   |   |   |   |   tempo <= 120.008: pop (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   tempo > 120.008: HipHop (10.0/1.0)
+|   |   |   |   |   |   |   |   |   mode > 0
+|   |   |   |   |   |   |   |   |   |   danceability <= 0.854: HipHop (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   danceability > 0.854: pop (2.0)
+|   |   instrumentalness > 0.00492
+|   |   |   tempo <= 98.523: pop (3.0/2.0)
+|   |   |   tempo > 98.523
+|   |   |   |   popularity <= 56
+|   |   |   |   |   year <= 2005
+|   |   |   |   |   |   danceability <= 0.778: rock (4.0)
+|   |   |   |   |   |   danceability > 0.778
+|   |   |   |   |   |   |   loudness <= -6.527: Dance_Electronic (2.0)
+|   |   |   |   |   |   |   loudness > -6.527: pop (3.0)
+|   |   |   |   |   year > 2005
+|   |   |   |   |   |   year <= 2015
+|   |   |   |   |   |   |   year <= 2014
+|   |   |   |   |   |   |   |   liveness <= 0.0909: pop (4.0)
+|   |   |   |   |   |   |   |   liveness > 0.0909
+|   |   |   |   |   |   |   |   |   acousticness <= 0.0756: Dance_Electronic (7.0/1.0)
+|   |   |   |   |   |   |   |   |   acousticness > 0.0756: pop (2.0)
+|   |   |   |   |   |   |   year > 2014: pop (4.0/1.0)
+|   |   |   |   |   |   year > 2015: Dance_Electronic (3.0)
+|   |   |   |   popularity > 56
+|   |   |   |   |   liveness <= 0.064
+|   |   |   |   |   |   popularity <= 71: HipHop (4.0)
+|   |   |   |   |   |   popularity > 71: Dance_Electronic (2.0)
+|   |   |   |   |   liveness > 0.064
+|   |   |   |   |   |   speechiness <= 0.0301: rock (4.0/1.0)
+|   |   |   |   |   |   speechiness > 0.0301
+|   |   |   |   |   |   |   instrumentalness <= 0.00599: rock (2.0)
+|   |   |   |   |   |   |   instrumentalness > 0.00599
+|   |   |   |   |   |   |   |   year <= 2004: pop (12.0/1.0)
+|   |   |   |   |   |   |   |   year > 2004
+|   |   |   |   |   |   |   |   |   artist <= 367
+|   |   |   |   |   |   |   |   |   |   artist <= 82: pop (3.0)
+|   |   |   |   |   |   |   |   |   |   artist > 82: HipHop (12.0/1.0)
+|   |   |   |   |   |   |   |   |   artist > 367: pop (10.0)
+explicit = True
+|   artist <= 738
+|   |   energy <= 0.863
+|   |   |   speechiness <= 0.0563
+|   |   |   |   year <= 2004
+|   |   |   |   |   speechiness <= 0.0373: rock (2.0)
+|   |   |   |   |   speechiness > 0.0373: HipHop (9.0)
+|   |   |   |   year > 2004
+|   |   |   |   |   danceability <= 0.461: pop (3.0/1.0)
+|   |   |   |   |   danceability > 0.461
+|   |   |   |   |   |   artist <= 247: pop (9.0/1.0)
+|   |   |   |   |   |   artist > 247
+|   |   |   |   |   |   |   liveness <= 0.0916
+|   |   |   |   |   |   |   |   duration_ms <= 229573: pop (7.0/1.0)
+|   |   |   |   |   |   |   |   duration_ms > 229573: HipHop (3.0/1.0)
+|   |   |   |   |   |   |   liveness > 0.0916
+|   |   |   |   |   |   |   |   instrumentalness <= 0.000012: HipHop (24.0/1.0)
+|   |   |   |   |   |   |   |   instrumentalness > 0.000012
+|   |   |   |   |   |   |   |   |   loudness <= -5.503: pop (4.0)
+|   |   |   |   |   |   |   |   |   loudness > -5.503: HipHop (4.0)
+|   |   |   speechiness > 0.0563
+|   |   |   |   popularity <= 51
+|   |   |   |   |   acousticness <= 0.0209
+|   |   |   |   |   |   valence <= 0.679: HipHop (9.0)
+|   |   |   |   |   |   valence > 0.679: Dance_Electronic (2.0)
+|   |   |   |   |   acousticness > 0.0209
+|   |   |   |   |   |   mode <= 0
+|   |   |   |   |   |   |   year <= 2013: HipHop (4.0)
+|   |   |   |   |   |   |   year > 2013: pop (6.0/1.0)
+|   |   |   |   |   |   mode > 0: HipHop (21.0/6.0)
+|   |   |   |   popularity > 51
+|   |   |   |   |   year <= 2018: HipHop (211.0/14.0)
+|   |   |   |   |   year > 2018
+|   |   |   |   |   |   artist <= 667
+|   |   |   |   |   |   |   duration_ms <= 209269: pop (5.0)
+|   |   |   |   |   |   |   duration_ms > 209269: HipHop (2.0)
+|   |   |   |   |   |   artist > 667: HipHop (3.0)
+|   |   energy > 0.863
+|   |   |   instrumentalness <= 0.00233
+|   |   |   |   speechiness <= 0.108
+|   |   |   |   |   danceability <= 0.544
+|   |   |   |   |   |   popularity <= 68: pop (2.0)
+|   |   |   |   |   |   popularity > 68: rock (2.0)
+|   |   |   |   |   danceability > 0.544
+|   |   |   |   |   |   year <= 2003: HipHop (2.0)
+|   |   |   |   |   |   year > 2003
+|   |   |   |   |   |   |   year <= 2010: pop (8.0)
+|   |   |   |   |   |   |   year > 2010
+|   |   |   |   |   |   |   |   loudness <= -2.896: HipHop (3.0)
+|   |   |   |   |   |   |   |   loudness > -2.896: pop (3.0)
+|   |   |   |   speechiness > 0.108
+|   |   |   |   |   duration_ms <= 214506: rock (2.0/1.0)
+|   |   |   |   |   duration_ms > 214506: HipHop (20.0/1.0)
+|   |   |   instrumentalness > 0.00233: rock (2.0/1.0)
+|   artist > 738
+|   |   acousticness <= 0.33
+|   |   |   loudness <= -3.988: HipHop (20.0/3.0)
+|   |   |   loudness > -3.988: pop (2.0)
+|   |   acousticness > 0.33
+|   |   |   duration_ms <= 218227: pop (2.0/1.0)
+|   |   |   duration_ms > 218227: latin (3.0/1.0)
+
+Number of Leaves  : 	165
+
+Size of the tree : 	329
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.01 seconds
+
+=== Summary ===
+
+Correctly Classified Instances         358               60.371  %
+Incorrectly Classified Instances       235               39.629  %
+Kappa statistic                          0.3306
+K&B Relative Info Score                 29.3549 %
+K&B Information Score                  298.2991 bits      0.503  bits/instance
+Class complexity | order 0            1016.1827 bits      1.7136 bits/instance
+Class complexity | scheme           137891.8194 bits    232.5326 bits/instance
+Complexity improvement     (Sf)    -136875.6366 bits   -230.8189 bits/instance
+Mean absolute error                      0.0789
+Root mean squared error                  0.2513
+Relative absolute error                 70.2023 %
+Root relative squared error            105.9858 %
+Total Number of Instances              593     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,707    0,383    0,639      0,707    0,671      0,325    0,654     0,598     pop
+                 0,218    0,048    0,316      0,218    0,258      0,201    0,689     0,201     rock
+                 0,647    0,213    0,638      0,647    0,642      0,432    0,735     0,581     HipHop
+                 0,000    0,015    0,000      0,000    0,000      -0,018   0,520     0,024     Dance_Electronic
+                 0,000    0,002    0,000      0,000    0,000      -0,003   0,486     0,005     metal
+                 0,000    0,000    ?          0,000    ?          ?        0,663     0,020     ReB
+                 0,000    0,000    ?          0,000    ?          ?        0,468     0,003     Folk_Acoustic
+                 0,000    0,000    ?          0,000    ?          ?        0,490     0,005     World_Traditional
+                 0,000    0,000    ?          0,000    ?          ?        0,484     0,003     latin
+                 0,000    0,005    0,000      0,000    0,000      -0,005   0,625     0,070     country
+                 0,000    0,000    ?          0,000    ?          ?        0,500     0,002     EasyListening
+Weighted Avg.    0,604    0,270    ?          0,604    ?          ?        0,681     0,526     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   e   f   g   h   i   j   k   <-- classified as
+ 205  15  62   5   0   0   0   0   0   3   0 |   a = pop
+  34  12   6   3   0   0   0   0   0   0   0 |   b = rock
+  67   8 141   1   1   0   0   0   0   0   0 |   c = HipHop
+   6   1   5   0   0   0   0   0   0   0   0 |   d = Dance_Electronic
+   1   1   1   0   0   0   0   0   0   0   0 |   e = metal
+   4   0   0   0   0   0   0   0   0   0   0 |   f = ReB
+   0   1   1   0   0   0   0   0   0   0   0 |   g = Folk_Acoustic
+   1   0   2   0   0   0   0   0   0   0   0 |   h = World_Traditional
+   0   0   2   0   0   0   0   0   0   0   0 |   i = latin
+   2   0   1   0   0   0   0   0   0   0   0 |   j = country
+   1   0   0   0   0   0   0   0   0   0   0 |   k = EasyListening
+
